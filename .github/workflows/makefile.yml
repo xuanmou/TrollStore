@@ -15,7 +15,8 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install libraries
-      run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      run: |
+           bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
            bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
            brew install libarchive
            make
